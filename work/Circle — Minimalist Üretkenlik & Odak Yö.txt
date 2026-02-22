@@ -1,0 +1,26 @@
+Circle — Minimalist Üretkenlik & Odak Yönetimi
+Talha Güleryüz
+
+Proje Hakkında
+Circle, modern insanın en büyük sorunu olan dikkat dağınıklığını ve karmaşık görev yönetimini "döngüsel" bir yaklaşımla çözen bir mobil uygulamadır. Kullanıcıların günlük rutinlerini, hedeflerini ve odak sürelerini tek bir merkezden, görsel bir sadelikle yönetmelerini sağlamak amacıyla tasarlanmıştır.
+
+Teknoloji Yığını (Önerilen/Tahmini)
+Frontend: React Native veya Flutter (Pürüzsüz animasyonlar ve cross-platform performans için).
+
+Backend: Supabase (Kullanıcı verilerinin anlık senkronizasyonu).
+
+Animasyonlar: Framer Motion veya Reanimated (Döngüsel geçişler ve etkileşimli geri bildirimler için).
+
+UI/UX: Figma (Bileşen tabanlı, atomik tasarım sistemi).
+
+Özellikler
+Döngüsel Görev Takibi: Tamamlanan her görevin bir döngüyü (Circle) kapatarak kullanıcıda başarı hissi uyandırması.
+
+Odak Zamanlayıcısı: Pomodoro tekniğini modern ve kişiselleştirilebilir bir arayüzle sunan "Deep Work" modu.
+
+Alışkanlık İzleyici: Günlük rutinlerin sürekliliğini görsel grafiklerle takip eden interaktif bir panel.
+
+Minimalist Bildirim Sistemi: Sadece en önemli görevler için kullanıcıyı rahatsız etmeden hatırlatma yapan akıllı sistem.
+
+Tasarım Yaklaşımı
+Circle’ın tasarım felsefesi "az ama öz" ilkesine dayanır. Karmaşık listeler yerine, yuvarlak hatlar ve geniş boşluklar (white space) kullanılarak zihinsel bir ferahlık hedeflenmiştir. Renk paleti, odağı artırmak için pastel ve göz yormayan tonlardan seçilmiş; her bir animasyon, kullanıcıyı yavaşlatmak yerine akışta (flow) kalmasını sağlamak için optimize edilmiştir.

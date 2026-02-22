@@ -1,21 +1,24 @@
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { iconLibrary } from "@/resources/icons";
+
+const LinkedInIcon = iconLibrary["linkedin"];
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Talha",
+  lastName: "Güleryüz",
+  name: `Talha Güleryüz`,
+  role: "Design Engineer & 3D Artist",
+  avatar: "/images/profil-foto.jpg",
+  email: "hello@talhaguleryuz.com",
+  location: "Europe/Istanbul", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Turkish", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <>{person.firstName}'ın Bültenine Abone Ol</>,
+  description: <>Yaratıcılık, mühendislik ve 3D tasarımı üzerine haftalık bültenim</>,
 };
 
 const social: Social = [
@@ -23,9 +26,9 @@ const social: Social = [
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
+    name: "Email",
+    icon: "email",
+    link: `mailto:${person.email}`,
     essential: true,
   },
   {
@@ -35,21 +38,15 @@ const social: Social = [
     essential: true,
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Behance",
+    icon: "behance",
+    link: "https://www.behance.net/talhagleryz",
     essential: true,
   },
   {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
+    name: "GitHub",
+    icon: "github",
+    link: "https://github.com/once-ui-system",
     essential: true,
   },
 ];
@@ -57,35 +54,35 @@ const social: Social = [
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  label: "Ana Sayfa",
+  title: `${person.name} | Portfolyo`,
+  description: `Bir ${person.role} olarak projelerimi sergilediğim kişisel portfolyom`,
+  headline: <>Tasarım ve teknolojinin kusursuz uyumu</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Öne Çıkan Çalışma</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Robotoy Vision S
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/robotoy-vision-s",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    Ben Talha, sezgisel kullanıcı deneyimleri ve yenilikçi ürün tasarımları üreten bir <Text as="span" size="xl" weight="strong">Tasarım Mühendisi ve 3D Sanatçısıyım</Text>.
 </>
   ),
 };
 
 const about: About = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "Hakkımda",
+  title: `Hakkımda – ${person.name}`,
+  description: `${person.location} konumundan ${person.role} ${person.name} ile tanışın`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,139 +91,204 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Giriş",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Ben Talha, dijital dünyada estetik ve mühendisliği bir araya getiren bir tasarım mühendisiyim. Karmaşık problemleri sezgisel arayüzlere dönüştürerek; tasarım, hareketli grafikler ve modern web teknolojilerini birleştiriyor, kusursuz etkileşimli deneyimler inşa ediyorum.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "İş Deneyimi",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Nevera Development Solutions (Ofis İçi)",
+        timeframe: "Temmuz 2025 - Günümüz",
+        role: "Industrial Designer & 3D Artist | Robot Design Lead",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Robotik sistemlerin geleceğini 3D görselleştirme, ürün estetiği ve donanım inovasyonuyla harmanlayarak tasarlıyorum.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Fusion 360, Unreal Engine 5, Blender ve endüstriyel CGI gibi araçlar üzerinden konsept tasarımdan, hızlı prototiplemeye ve mekanik tasarıma uzanan uçtan uca bir üretim süreci yürütüyorum.
           </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <div style={{ position: "relative", left: "-24px" }} className="hide-bullet">
+            <style dangerouslySetInnerHTML={{
+              __html: `
+                .hide-bullet {
+                  list-style: none !important;
+                }
+                li:has(> .hide-bullet) {
+                  list-style-type: none !important;
+                  margin-top: 16px;
+                }
+                .linkedin-exp-btn {
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  color: #0a66c2;
+                  font-weight: 600;
+                  background: rgba(10, 102, 194, 0.1);
+                  padding: 8px 16px;
+                  border-radius: 100px;
+                  text-decoration: none;
+                  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                  border: 1px solid rgba(10, 102, 194, 0.2);
+                }
+                .linkedin-exp-btn:hover {
+                  background: #0a66c2;
+                  color: white !important;
+                  transform: translateY(-2px) scale(1.02);
+                  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.3);
+                }
+                .linkedin-exp-btn:hover svg {
+                  color: white !important;
+                }
+              `
+            }} />
+            <a 
+              href="https://www.linkedin.com/in/talha-g%C3%BClery%C3%BCz-920422309/details/experience/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="linkedin-exp-btn"
+            >
+              {LinkedInIcon && <LinkedInIcon size={20} />}
+              <span>LinkedIn</span>
+            </a>
+          </div>
         ],
         images: [],
       },
+      {
+        company: "Feron · Kendi işim",
+        timeframe: "Ocak 2025 - Günümüz",
+        role: "Founder & Product Lead",
+        achievements: [
+          <>
+            Geleneksel e-ticaret deneyimini AI destekli hiper-kişiselleştirilmiş bir stil ekosistemine dönüştüren dijital moda asistanı Feron'u kurdum.
+          </>,
+          <>
+            Google Gemini API entegrasyonu ile AI tabanlı görüntü analizi akışlarını ve kullanıcının kişisel tercihlerine göre günlük kombinler sunan akıllı stil motorunu kurguladım.
+          </>,
+          <>
+            React Native ve Supabase altyapısıyla geliştirilen mobil uygulamanın onboarding sürecinden dijital gardırop yönetimine kadar olan tüm ürün stratejisini (UI/UX) yönettim.
+          </>,
+          <div style={{ position: "relative", left: "-24px" }} className="hide-bullet">
+            <a 
+              href="https://www.linkedin.com/in/talha-g%C3%BClery%C3%BCz-920422309/details/experience/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="linkedin-exp-btn"
+            >
+              {LinkedInIcon && <LinkedInIcon size={20} />}
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        ],
+        images: [],
+      },
+      {
+        company: "İKÜ Asimov Teknoloji Kulübü",
+        timeframe: "Nisan 2024 - Haziran 2025",
+        role: "UI/UX Designer",
+        achievements: [
+          <>
+            Teknofest yarışması kapsamında, tarihi ve turistik mekanları görüntü işleme ile tanıyarak anında bilgi veren yapay zeka destekli mobil dijital tur rehberi uygulamasının başlangıçtan bitişe tüm kullanıcı deneyimini (UI/UX) tasarladım.
+          </>,
+          <>
+            Figma üzerinde modern bir arayüz kurguladım ve After Effects kullanarak uygulamanın kullanıcı akışları için etkileşimli video animasyonlar ürettim.
+          </>,
+          <div style={{ position: "relative", left: "-24px" }} className="hide-bullet">
+            <a 
+              href="https://www.linkedin.com/in/talha-g%C3%BClery%C3%BCz-920422309/details/experience/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="linkedin-exp-btn"
+            >
+              {LinkedInIcon && <LinkedInIcon size={20} />}
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        ],
+      }
     ],
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Eğitim",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "T.C. İstanbul Kültür Üniversitesi",
+        description: <></>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Teknik Yetenekler",
     skills: [
       {
-        title: "Figma",
+        title: "3D Tasarım & Görselleştirme",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Endüstriyel ürün tasarımından, gerçek zamanlı render ve animasyonlara kadar uçtan uca 3D modelleme ve görselleştirme yetkinliği.
+          </>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Fusion 360", icon: "autodesk" },
+          { name: "Unreal Engine 5", icon: "unreal" },
+          { name: "Blender", icon: "blender" },
+          { name: "Cinema 4D", icon: "cube" },
+          { name: "Houdini", icon: "houdini" },
+          { name: "Shapr3D", icon: "cube" },
+          { name: "CAD Modeling", icon: "cube" },
+          { name: "Real-time Rendering", icon: "play" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "UI/UX & Prototipleme",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Kullanıcı merkezli tasarımlar, mikro etkileşimler, akıcı video animasyonlar ve yüksek sadakatli (high-fidelity) mobil/web prototipleri geliştirme.
+          </>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Figma", icon: "figma" },
+          { name: "Framer", icon: "framer" },
+          { name: "Spline", icon: "cube" },
+          { name: "Lottie", icon: "play" },
+          { name: "Adobe Cre. Cloud", icon: "adobe" },
+          { name: "After Effects", icon: "play" },
+          { name: "Webflow", icon: "openLink" },
+          { name: "Miro", icon: "grid" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Web/Mobil Geliştirme & Yapay Zeka",
+        description: (
+          <>
+            Tasarımı gerçeğe dönüştüren, AI destekli altyapılarla güçlendirilmiş, ölçeklenebilir ve performanslı yazılım teknolojileri.
+          </>
+        ),
+        tags: [
+          { name: "React Native", icon: "nextjs" }, // using nextjs icon roughly for react
+          { name: "Next.js", icon: "nextjs" },
+          { name: "Node.js", icon: "nodejs" },
+          { name: "Supabase", icon: "supabase" },
+          { name: "JavaScript / TS", icon: "javascript" },
+          { name: "Python", icon: "code" },
+          { name: "Gemini API", icon: "code" },
+          { name: "OpenAI API", icon: "code" },
         ],
+        images: [],
       },
     ],
   },
@@ -235,26 +297,22 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  title: "Tasarım ve Teknoloji Üzerine Yazılar...",
+  description: `${person.name}'ün güncel denemeleri ve rehberleri`,
 };
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  label: "Projeler",
+  title: `Projeler – ${person.name}`,
+  description: `${person.name} tarafından geliştirilen tasarım ve yazılım çalışmaları`,
 };
 
 const gallery: Gallery = {
   path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  label: "Galeri",
+  title: `Fotoğraf Galerisi – ${person.name}`,
+  description: `${person.name}'ün objektifinden veya 3D renderlarından kesitler`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [

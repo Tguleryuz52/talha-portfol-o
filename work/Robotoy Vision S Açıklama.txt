@@ -1,0 +1,24 @@
+Robotoy Vision S — Otonom Bebek & Çocuk Refakatçisi
+Talha Güleryüz
+
+Proje Hakkında
+Robotoy Vision S, çocukların gelişim süreçlerini desteklemek ve onlara güvenli, etkileşimli bir oyun arkadaşı sunmak için tasarlanmış otonom bir refakatçi robottur. Proje, ebeveynlerin üzerindeki gözetim yükünü hafifletirken, çocukların teknolojiyle sağlıklı ve eğitici bir bağ kurmasını hedefler.
+
+Teknoloji Yığını
+Endüstriyel Tasarım & 3D: Shapr3D ve Autodesk (Hassas modelleme), Unity (Görselleştirme ve simülasyon).
+
+Otonom Sistemler: Engel tanıma, nesne takibi ve otonom hareket algoritmaları.
+
+Prototipleme: 3D baskı teknolojileri ve otonom robotik mantık devreleri.
+
+Özellikler
+Otonom Hareket Kabiliyeti: Çocuğu güvenli mesafeden takip edebilme ve ev içi engellerden akıllıca kaçınma.
+
+Etkileşimli Oyun Arkadaşı: Çocuklarla görsel ve sosyal etkileşim kurarak oyun süreçlerine dahil olma.
+
+Bebek/Çocuk Güvenliği: Keskin hatlardan arındırılmış, çocuk ergonomisine uygun anti-alerjik malzeme ve form tasarımı.
+
+Ebeveyn Denetimi: Robot üzerinden çocukların anlık durumunu izleme ve uzaktan kontrol imkanı.
+
+Tasarım Yaklaşımı
+"Teknoloji korkutucu değil, dost canlısı olmalı" felsefesiyle yola çıkıldı. Robotun dış kabuğu, çocukların kendilerini güvende hissetmelerini sağlayacak yumuşak ve kavisli formlarla tasarlandı. Teknik karmaşıklık, minimalist bir dış gövde tasarımıyla gizlenerek estetik ve fonksiyonel bir bütünlük sağlandı.

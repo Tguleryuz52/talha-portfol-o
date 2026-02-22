@@ -70,7 +70,7 @@ const socialPlatforms: Record<string, SocialPlatform> = {
     icon: "email",
     label: "Email",
     generateUrl: (title, url) => 
-      `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`Check out this post: ${url}`)}`,
+      `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`Şu yazıya göz at: ${url}`)}`,
   },
 };
 
@@ -86,13 +86,13 @@ export function ShareSection({ title, url }: ShareSectionProps) {
       await navigator.clipboard.writeText(url);
       addToast({
         variant: "success",
-        message: "Link copied to clipboard",
+        message: "Bağlantı kopyalandı",
       });
     } catch (err) {
       console.error('Failed to copy: ', err);
       addToast({
         variant: "danger",
-        message: "Failed to copy link",
+        message: "Bağlantı kopyalanamadı",
       });
     }
   };
@@ -106,7 +106,7 @@ export function ShareSection({ title, url }: ShareSectionProps) {
   return (
     <Row fillWidth center gap="16" marginTop="32" marginBottom="16">
       <Text variant="label-default-m" onBackground="neutral-weak">
-        Share this post:
+        Bu yazıyı paylaş:
       </Text>
       <Row data-border="rounded" gap="16" horizontal="center" wrap>
         {enabledPlatforms.map((platform, index) => (

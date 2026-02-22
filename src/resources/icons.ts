@@ -20,6 +20,8 @@ import {
   PiGridFourDuotone,
   PiBookBookmarkDuotone,
   PiImageDuotone,
+  PiCubeDuotone,
+  PiPlayCircleDuotone,
 } from "react-icons/pi";
 
 import {
@@ -27,9 +29,17 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiAutodesk,
+  SiBlender,
+  SiHoudini,
+  SiUnrealengine,
+  SiUnity,
+  SiFramer,
+  SiNodedotjs,
+  SiAdobecreativecloud,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { FaCode, FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, FaBehance, FaArrowPointer } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -62,8 +72,20 @@ export const iconLibrary: Record<string, IconType> = {
   pinterest: FaPinterest,
   whatsapp: FaWhatsapp,
   reddit: FaReddit,
-  telegram: FaTelegram,
-  instagram: FaInstagram,
+  cube: PiCubeDuotone,
+  play: PiPlayCircleDuotone,
+  code: FaCode,
+  behance: FaBehance,
+  autodesk: SiAutodesk,
+  blender: SiBlender,
+  houdini: SiHoudini,
+  unreal: SiUnrealengine,
+  unity: SiUnity,
+  framer: SiFramer,
+  nodejs: SiNodedotjs,
+  adobe: SiAdobecreativecloud,
+  cursor: FaArrowPointer,
+  antigravity: HiOutlineRocketLaunch,
 };
 
 export type IconLibrary = typeof iconLibrary;

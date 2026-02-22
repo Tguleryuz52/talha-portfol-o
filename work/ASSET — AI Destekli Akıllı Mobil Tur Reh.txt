@@ -1,0 +1,24 @@
+ASSET — AI Destekli Akıllı Mobil Tur Rehberi (TEKNOFEST 2026)
+Talha Güleryüz — Kurucu & Baş Geliştirici
+
+Proje Vizyonu: "Kamera Merceğinden Tarihe Yolculuk"
+ASSET, turizm deneyimini geleneksel yöntemlerden kurtarıp tamamen dijital ve interaktif bir boyuta taşıyan, TEKNOFEST için özel olarak geliştirilmiş bir mobil rehberlik platformudur. Kullanıcının sadece bir fotoğraf çekerek karşısındaki tarihi eser, yapı veya kültürel miras hakkında anlık ve derinlemesine bilgi almasını sağlar.
+
+Teknoloji ve İnovasyon Yığını
+Frontend: React Native ile inşa edilen, sahadaki kullanıcı için optimize edilmiş, hızlı ve akıcı mobil arayüz.
+
+Görsel Zeka (AI): Görüntü işleme ve nesne tanıma teknolojileri (Google Gemini/Vision AI) ile fotoğraflanan nesnenin milisaniyeler içinde teşhis edilmesi.
+
+Backend & Veri Mimarisi: Supabase veya Firebase altyapısı kullanarak, devasa turistik veri setlerine (tarihi bilgiler, lokasyon verileri) anlık erişim.
+
+Konum Tabanlı Servisler: Kullanıcının coğrafi konumunu analiz ederek, çevresindeki keşfedilmeyi bekleyen noktaları akıllı bildirimlerle sunan yapı.
+
+TEKNOFEST Başarısı ve Öne Çıkanlar
+Akıllı Turizm Çözümü: Türkiye’nin en büyük teknoloji festivali TEKNOFEST’te, yerli ve milli turizm teknolojileri vizyonuyla sergilenmiş bir projedir.
+
+Erişilebilirlik: Fiziksel bir rehbere ihtiyaç duymadan, her an ve her yerde kişiselleştirilmiş bir müze ve şehir turu deneyimi sunar.
+
+Kültürel Mirasın Dijitalleşmesi: Tarihi ve kültürel değerlerin yeni nesillere teknoloji aracılığıyla aktarılmasını sağlayan eğitim ve kültür odaklı bir inovasyon.
+
+Tasarım Yaklaşımı
+Tasarım süreci, bir turistin sahada ihtiyaç duyacağı "hız ve sadelik" üzerine kurgulandı. Karmaşık menüler yerine, kamerayı merkeze alan bir kullanıcı deneyimi (UX) tasarlandı; böylece teknoloji, kullanıcının keşif heyecanının önüne geçmeden ona eşlik eden sessiz bir rehbere dönüştü.

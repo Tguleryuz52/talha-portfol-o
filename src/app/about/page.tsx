@@ -133,7 +133,7 @@ export default function About() {
                 }}
               >
                 <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
+                <Row paddingX="8">Bir Görüşme Planla</Row>
                 <IconButton
                   href={about.calendar.link}
                   data-border="rounded"
@@ -257,6 +257,16 @@ export default function About() {
                     )}
                   </Column>
                 ))}
+                
+                <Row fillWidth horizontal="center" paddingTop="16">
+                  <Button
+                    href="https://www.linkedin.com/in/talha-g%C3%BClery%C3%BCz-920422309/details/experience/"
+                    prefixIcon="linkedin"
+                    label="Tüm Deneyimleri LinkedIn'de İncele"
+                    variant="secondary"
+                    size="m"
+                  />
+                </Row>
               </Column>
             </>
           )}

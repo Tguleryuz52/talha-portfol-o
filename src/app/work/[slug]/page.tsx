@@ -9,6 +9,7 @@ import {
   Flex,
   Heading,
   Media,
+  Carousel,
   Text,
   SmartLink,
   Row,
@@ -94,7 +95,7 @@ export default async function Project({
       />
       <Column maxWidth="s" gap="16" horizontal="center" align="center">
         <SmartLink href="/work">
-          <Text variant="label-strong-m">Projects</Text>
+          <Text variant="label-strong-m">Projeler</Text>
         </SmartLink>
         <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
           {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
@@ -119,7 +120,27 @@ export default async function Project({
         </Row>
       </Row>
       {post.metadata.images.length > 0 && (
-        <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
+        <Carousel
+          aspectRatio="16 / 9"
+          sizes="(max-width: 960px) 100vw, 960px"
+          items={post.metadata.images.map((image) => ({
+            slide: image,
+            alt: post.metadata.title,
+          }))}
+        />
+      )}
+      
+      {post.metadata.link && (
+        <Row horizontal="center" marginTop="16" marginBottom="32">
+          <Button
+            href={post.metadata.link}
+            prefixIcon="behance"
+            suffixIcon="arrowUpRightFromSquare"
+            label="Behance'te Görüntüle"
+            variant="primary"
+            size="l"
+          />
+        </Row>
       )}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
         <CustomMDX source={post.content} />
@@ -127,7 +148,7 @@ export default async function Project({
       <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
         <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
-          Related projects
+          İlgili projeler
         </Heading>
         <Projects exclude={[post.slug]} range={[2]} />
       </Column>

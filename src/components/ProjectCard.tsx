@@ -33,6 +33,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <Column fillWidth gap="m">
       <Carousel
+        aspectRatio="16 / 9"
         sizes="(max-width: 960px) 100vw, 960px"
         items={images.map((image) => ({
           slide: image,
@@ -56,7 +57,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
           <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
+            {avatars?.length > 0 && (
+              <Flex vertical="center" gap="12">
+                <AvatarGroup avatars={avatars} size="m" reverse />
+                <Text variant="label-default-m" onBackground="neutral-strong">Talha Güleryüz</Text>
+              </Flex>
+            )}
             {description?.trim() && (
               <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
                 {description}
@@ -69,16 +75,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   style={{ margin: "0", width: "fit-content" }}
                   href={href}
                 >
-                  <Text variant="body-default-s">Read case study</Text>
+                  <Text variant="body-default-s">Proje Detayları</Text>
                 </SmartLink>
               )}
               {link && (
                 <SmartLink
+                  prefixIcon="behance"
                   suffixIcon="arrowUpRightFromSquare"
                   style={{ margin: "0", width: "fit-content" }}
                   href={link}
                 >
-                  <Text variant="body-default-s">View project</Text>
+                  <Text variant="body-default-s">Behance'te İncele</Text>
                 </SmartLink>
               )}
             </Flex>
