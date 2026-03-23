@@ -61,7 +61,7 @@ export const CTASection = ({ title, subtitle, buttonLabel }: Props) => {
             </a>
             <span style={{ color: "rgba(255,255,255,0.15)" }}>|</span>
             <a
-              href="https://github.com/Talha5228"
+              href="https://github.com/Tguleryuz52"
               className="social-icon"
               target="_blank"
               rel="noopener noreferrer"

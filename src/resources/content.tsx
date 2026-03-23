@@ -34,7 +34,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/talha-g%C3%BClery%C3%BCz-920422309/",
     essential: true,
   },
   {
@@ -46,7 +46,7 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Tguleryuz52",
     essential: true,
   },
 ];
